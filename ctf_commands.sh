@@ -23,7 +23,7 @@ nikto -h http://target.url -useragent "Mozilla/5.0" # Change user agent
 # Brute Force
 hydra -l <username> -P <password_list> ssh://<target IP>
 python3 sqlmap.py -r /home/tryhackme/expose/expose.req — dump
-
+john --wordlist=/usr/share/wordlists/rockyou.txt <file>
 
 
 
