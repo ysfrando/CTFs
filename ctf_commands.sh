@@ -7,6 +7,7 @@
 nmap -sV -sC -O -n -oA nmapscan <IP>
 sudo nmap -T4 --min-rate 1000 -sV -sC -p- -oN nmap_report <ip>
 nmap --script http-enum -v $IP -p80 -oA ~/CTF/$IP/http_enum # HTTP
+nmap -sV --script ssl-enum-ciphers <target-ip>
 
 # Subdomain Enum
 gobuster dns -d target.com -w /path/to/wordlist.txt
